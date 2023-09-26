@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adorn - Portfolio</title>
+    <style>
+        /* Inline CSS for the entire page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        #app {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #a28780;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        nav {
+            background-color: #e8905d;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin: 10px 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #d87034;
+            color: #b69090;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Inline CSS for specific elements */
+        /* Add your inline CSS here */
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>ADORN</h1>
+            <p>Web Developer | Creative Designer</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="about">
+                <h2>About Myself</h2>
+                <div>
+                    <img src="profile.png" alt="Adorn">
+                    <p> Hello, I'm Adorn Jose, an enthusiastic IT student studying in Melbourne. I'm currently in my first year pursuing a Bachelor's degree in Information Technology. During my leisure time, I like to watch movies and explore the fundamentals of coding. I'm constantly excited about acquiring fresh knowledge related to emerging technologies and software tools..</p>
+                </div>
+            </section>
+
+            <section id="portfolio">
+                <h2>Portfolio</h2>
+                <div>
+                    <div>
+                        <h3>Project 1: Task 1.1P - Creating a website for donutshop</h3>
+                        <p>"The skill used in this HTML code and added CSS style in this website."</p>
+                    </div>
+                    <div>
+                        <h3>Project 2: Task 1.2P - Created a website for Responsive Web Design </h3>
+                        <p>"  The skill used in this HTML code and added CSS style and javascript also added in this website."</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Skills</h2>
+                <div>
+                    <ul>
+                        <li>Front-End Development</li>
+                        <li>Responsive Web Design</li>
+                        <li>Web Development Frameworks</li>
+                        <li>Problem-Solving</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <div>
+                    <p>I am open for collaborative work. Please do not hesitate to contact me!</p>
+                    <input type="text" id="userInput" placeholder="Your Message">
+                    
+                    <p id="userTypedMessage">No message entered.</p>
+                    
+                    <button id="submitMessage">Submit</button>
+                    <p id="messageSent">Message sent successfully!</p>
+                    
+                    <ul>
+                        <li>Email: <a href="mailto:adorn@gmail.com">adornjm@gmail.com</a></li>
+                        <li>Phone Number: <a href="tel:+61470288925">+61 470288925</a></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Adorn</p>
+        </footer>
+    </div>
+
+    <script>
+        // Your JavaScript code here (for handling user interactions and form submission)
+        const userInputField = document.getElementById('userInput');
+        const userTypedMessage = document.getElementById('userTypedMessage');
+        const submitButton = document.getElementById('submitMessage');
+        const messageSentConfirmation = document.getElementById('messageSent');
+
+        submitButton.addEventListener('click', () => {
+            const userInput = userInputField.value.trim();
+            if (userInput !== '') {
+                userTypedMessage.textContent = `You typed: ${userInput}`;
+                messageSentConfirmation.style.display = 'block';
+
+                // You can send the message to the server or perform other actions here
+            } else {
+                userTypedMessage.textContent = 'No message entered.';
+                messageSentConfirmation.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
